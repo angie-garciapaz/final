@@ -1,0 +1,18 @@
+<div class="card mb-2">
+  <img class="card-img-top"
+       [src]="classifieds?.image"
+       alt="{{classifieds?.name}}"
+       class="img-responsive"
+       style="max-width: 225px; max-height: 200px">
+  <div class="card-body">
+    <h5 class="card-title">{{classifieds?.name}}</h5>
+    <p class="card-text">{{classifieds.description}}</p>
+  </div>
+  <div class="card-footer text-center">
+    <a [routerLink]="classifieds.id"
+       routerLinkActive="active"
+       class="btn btn-primary btn-sm"
+    >More Info</a>
+  </div>
+</div>
+

@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-12">
+            <h4>{{classifieds.name}}</h4>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="pull-left">
+              <h4 class="list-group-item-heading">
+                <img style="max-height: 100px;"
+                     [src]="classifieds.image"
+                     alt="{{classifieds.name}}">
+              </h4>
+            </div>
+            <span class="pull-right">
+             <a [routerLink]="['edit']"
+                class="btn btn-primary"
+                style="margin-right: 5px;">Edit</a>
+                 <a (click)="onDelete()"
+                    class="btn btn-danger">Delete</a>
+
+      </span>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-body">
+        <div><strong>Name:</strong> {{classifieds.name}}</div>
+        <div><strong>Description:</strong> {{classifieds.description}}</div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

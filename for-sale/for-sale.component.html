@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-5">
+    <h3>Item Details</h3>
+    <div class="input-group pull-left pad-left-right col-xs-7">
+
+      <input
+        class="form-control"
+        type="text"
+        #searchBox
+        placeholder="Enter Search Value"
+        (keyup)="onKeyPress(searchBox.value)"
+      >
+
+      <div class="glyphicon glyphicon glyphicon-search input-group-addon"
+           (click)="onKeyPress(searchBox.value)"></div>
+    </div>
+
+    <app-for-sale-details></app-for-sale-details>
+  </div>
+  <div class="col-7">
+    <div class="card-deck">
+      <app-for-sale-items
+        *ngFor="let classified of classifieds | classifiedFilter: term"
+        [classifieds]="classified"
+      ></app-for-sale-items>
+    </div>
+  </div>
+</div>
